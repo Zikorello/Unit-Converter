@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+     <!-- Input Section -->
+    <header>
+        <h1>Metric / Imperal Unit Conversion</h1>
+        <div id="toggle">
+            <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+            </label>
+        </div>
+        <input type="number" id="input-field" max="999999999">
+        <button id="convert-btn">Convert</button>
+    </header>
+    <!-- Convertion Section -->
+    <body>
+        <div id="unit-container">
+            <div class="unit">
+                <h2>Length ( Meter / Feet )</h2>
+                <p id="length-field">0 meters = 0 feets | 0 feets = 0 meters</p>
+            </div>
+            <div class="unit">
+                <h2>Volume ( Liters / Gallons )</h2>
+                <p id="volume-field">0 liters = 0 gallons | 0 gallons = 0 liters</p>
+            </div>
+            <div class="unit">
+                <h2>Mass ( Kilograms / Pounds )</h2>
+                <p id="mass-field">0 kilos = 0 pounds | 0 pounds = 0 kilos</p>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
