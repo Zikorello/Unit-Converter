@@ -14,17 +14,14 @@ const mass = 2.204 // 1 kilogram = 2.204 pound
 /* CONVERTION */
     
 /* Equation */
-    function unitEquation(input, unit1, unit2, ratio) {
-        return`${input} ${unit1} = ${(input*ratio).toFixed(2)} ${unit2} | ${input} ${unit2} = ${(input/ratio).toFixed(2)} ${unit1}` 
-    }
+function unitEquation(input, unit1, unit2, ratio) {
+    return`${input} ${unit1} = ${(input*ratio).toFixed(2)} ${unit2} | ${input} ${unit2} = ${(input/ratio).toFixed(2)} ${unit1}` 
+}
 
 /* Convertion */
 function unitConverter() {
 let input = Number(inputField.value) // Number() also converts exponents to whole numbers (2e2 = 200), and displays them in the output field.
-if (input === "" || input === 0) {  
-    // Don't want anything to happen, if nothing has been input yet.
-    //Due to the fact that Number() converts an empty field to the value of 0, I had to include the OR operator of both an empty string and 0.
-} else {
+if (input) {  // Don't want anything to happen, if nothing has been input yet.
     unitLength.innerHTML = unitEquation(input, "meters", "feet", length)
     unitVolume.innerHTML = unitEquation(input, "liters", "gallons", volume)
     unitMass.innerHTML = unitEquation(input, "kilos", "pounds", mass)
@@ -67,7 +64,4 @@ const p = document.querySelector("p")
 
 lightMode.addEventListener("click", () => {
     body.classList.toggle("light-mode")
-    container.classList.toggle("light-mode")
-    h2.classList.toggle("light-mode")
-    p.classList.toggle("light-mode")
 })
